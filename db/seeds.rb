@@ -28,9 +28,14 @@ end
 #   ingredients << element ["strIngredient1"]
 # end
 
+# ingredient1 = Ingredient.new(name: ingredient_url["drinks"].sample)
+# ingredient1.save
+# p ingredient1
+
 puts 'Creating 5 ingredients...'
 5.times do
   ingredient = Ingredient.new(name: ingredient_url["drinks"].sample)
-  ingredient.save!
+  ingredient.save
 end
 puts 'Finished!'
+p Ingredient.all
